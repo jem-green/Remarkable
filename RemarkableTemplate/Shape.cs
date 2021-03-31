@@ -8,11 +8,17 @@ namespace SVGCreate
 {
     public class Shape
     {
+
         // 1404x1872 Supposidly the size of the page
         // Set the centre of the page to be zero, Zero 
 
+        #region Fields
+
         int _width = 1404;
         int _height = 1872;
+
+        #endregion
+        #region Constuctors
 
         public Shape()
         {
@@ -23,6 +29,9 @@ namespace SVGCreate
             _width = width;
             _height = height;
         }
+
+        #endregion
+        #region Methods
 
         public void Grid(int _spacing, string filename)
         {
@@ -51,7 +60,17 @@ namespace SVGCreate
             };
 
             var group = new SvgGroup();
-            svgDoc.Children.Add(group);
+
+            // Add a background
+
+            group.Children.Add(new SvgRectangle
+            {
+                X = -_width / 2,
+                Y = -_height / 2,
+                Width = _width,
+                Height = _height,
+                Fill = new SvgColourServer(Color.White)
+            });
 
             for (int i = _left; i <= _right; i = i + _spacing)
             {
@@ -82,6 +101,7 @@ namespace SVGCreate
                     });
                 }
             }
+            svgDoc.Children.Add(group);
             svgDoc.Write(filename);
         }
        
@@ -106,7 +126,17 @@ namespace SVGCreate
             };
 
             var group = new SvgGroup();
-            svgDoc.Children.Add(group);
+
+            // Add a background
+
+            group.Children.Add(new SvgRectangle
+            {
+                X = -_width / 2,
+                Y = -_height / 2,
+                Width = _width,
+                Height = _height,
+                Fill = new SvgColourServer(Color.White)
+            });
 
             for (int i = _left; i < _right; i = i + _spacing)
             {
@@ -134,6 +164,7 @@ namespace SVGCreate
                     });
                 }
             }
+            svgDoc.Children.Add(group);
             svgDoc.Write(filename);
         }
 
@@ -159,7 +190,17 @@ namespace SVGCreate
             };
 
             var group = new SvgGroup();
-            svgDoc.Children.Add(group);
+
+            // Add a background
+
+            group.Children.Add(new SvgRectangle
+            {
+                X = -_width / 2,
+                Y = -_height / 2,
+                Width = _width,
+                Height = _height,
+                Fill = new SvgColourServer(Color.White)
+            });
 
             for (double i = _left; i < _right; i = i + _spacing)
             {
@@ -212,6 +253,7 @@ namespace SVGCreate
 
                 }
             }
+            svgDoc.Children.Add(group);
             svgDoc.Write(filename);
         }
 
@@ -238,7 +280,17 @@ namespace SVGCreate
             };
 
             var group = new SvgGroup();
-            svgDoc.Children.Add(group);
+
+            // Add a background
+
+            group.Children.Add(new SvgRectangle
+            {
+                X = -_width / 2,
+                Y = -_height / 2,
+                Width = _width,
+                Height = _height,
+                Fill = new SvgColourServer(Color.White)
+            });
 
             bool even = false;
 
@@ -321,7 +373,10 @@ namespace SVGCreate
                     });
                 }
             }
+            svgDoc.Children.Add(group);
             svgDoc.Write(filename);
         }
     }
+
+    #endregion
 }
