@@ -18,9 +18,9 @@ namespace SVGCreate
             shape.RightGrid(20, "tinyrightgrid.svg");
             shape.RightGrid(40, "smallrightgrid.svg");
 
-            shape.Triangle(10, "verytinytriange.svg");
-            shape.Triangle(20, "tinytriange.svg");
-            shape.Triangle(40, "smalltriange.svg");
+            shape.Triangle(10, "verytinytriangle.svg");
+            shape.Triangle(20, "tinytriangle.svg");
+            shape.Triangle(40, "smalltriangle.svg");
 
             shape.Hexagon(10, "verytinyhexagon.svg");
             shape.Hexagon(20, "tinyhexagon.svg");
