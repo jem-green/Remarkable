@@ -11,7 +11,7 @@ So added:
 * triangle grid
 * Hexagon grid
 
-The format is a transprent png approximatly 1404 x 1872 pixels.
+The format is a white background png approximatly 1404 x 1872 pixels.
  
 The process I have chosen is to initially generate the grids as svg's and then save this as png's.
  
